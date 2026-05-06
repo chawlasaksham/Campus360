@@ -1,0 +1,126 @@
+{
+  "project_context": {
+    "app_name": "Class Management System",
+    "domain": "Education / Dashboard",
+    "theme": "Light Theme",
+    "archetype": "Archetype 3 (Pastel & Soft) with a Neo-Brutalist Professional Twist",
+    "vibe": "Approachable, optimistic, tactile, but structured and professional",
+    "roles": ["Admin", "Teacher", "Student"]
+  },
+  "colors": {
+    "background_base": "#FAFAFA",
+    "background_card": "#FFFFFF",
+    "primary": "#818CF8",
+    "primary_hover": "#6366F1",
+    "secondary": "#FDE68A",
+    "accent_mint": "#E8F5E9",
+    "text_main": "#1C1C1E",
+    "text_muted": "#52525B",
+    "border_hard": "#111111",
+    "border_soft": "#E4E4E7",
+    "error": "#EF4444",
+    "success": "#10B981",
+    "rules": [
+      "No full-screen generic gradients.",
+      "No default SaaS blue, purple-blue gradients, or standard teal (#1B93A4).",
+      "Use 'Neo-Brutalist' contrast: Pair soft pastels (mint, butter yellow) with hard 1px black borders and deep charcoal text to keep it professional and avoid looking childish.",
+      "Hover state color must be explicitly defined and higher contrast."
+    ]
+  },
+  "typography": {
+    "font_heading": "Cabinet Grotesk",
+    "font_body": "Work Sans",
+    "banned_fonts": ["Inter", "Roboto", "Open Sans", "Space Grotesk"],
+    "scales": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter leading-none font-black",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight leading-tight font-bold",
+      "h3": "text-xl sm:text-2xl tracking-tight font-semibold",
+      "body": "text-base leading-relaxed text-[#1C1C1E]",
+      "labels": "text-xs tracking-[0.2em] uppercase font-bold text-[#52525B]"
+    },
+    "rules": [
+      "Never center headings by default. Left-align dense content and tables.",
+      "Maintain a strict hierarchy jump (max 2 Tailwind steps between heading and subtitle)."
+    ]
+  },
+  "layout_spacing": {
+    "philosophy": "Generous Spacing (p-6, p-8, p-12)",
+    "dashboards": {
+      "grid_type": "The Control Room Grid",
+      "base": "grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6",
+      "summary_widgets": "col-span-1",
+      "data_tables": "col-span-full lg:col-span-3",
+      "side_panels": "col-span-1"
+    },
+    "auth_pages": {
+      "grid_type": "The Tetris Grid",
+      "base": "grid-cols-1 lg:grid-cols-12 gap-0 min-h-screen",
+      "form_section": "lg:col-span-5 flex items-center justify-center p-12 bg-[#FAFAFA]",
+      "image_section": "lg:col-span-7 hidden lg:block bg-[#FDE68A] relative border-l border-[#111111]"
+    },
+    "rules": [
+      "Containers with borders must have internal padding (p-6 or p-8) to prevent text collision.",
+      "Images must not exceed 80vh on mobile devices."
+    ]
+  },
+  "surface_components": {
+    "header_nav": {
+      "style": "Glassmorphism (Crystal)",
+      "classes": "sticky top-0 z-50 backdrop-blur-xl bg-white/70 backdrop-saturate-150 border-b border-[#E4E4E7] shadow-sm"
+    },
+    "dashboard_cards": {
+      "style": "Clay & Crisp (Neumorphism with an E1 Twist)",
+      "classes": "bg-white border border-[#111111] shadow-[4px_4px_0px_0px_rgba(17,17,17,1)] rounded-lg p-6 transition-transform hover:-translate-y-1 hover:shadow-[6px_6px_0px_0px_rgba(17,17,17,1)]"
+    },
+    "buttons": {
+      "primary": "bg-[#1C1C1E] text-white font-bold px-6 py-3 rounded border border-[#111111] hover:bg-[#818CF8] hover:text-[#111111] transition-all",
+      "secondary": "bg-[#FDE68A] text-[#1C1C1E] font-bold px-6 py-3 rounded border border-[#111111] hover:bg-[#FCD34D] transition-all"
+    },
+    "tables": {
+      "style": "Grid Borders (The Technical Look)",
+      "classes": "w-full border-collapse border border-[#111111]",
+      "headers": "bg-[#E8F5E9] font-bold border-b border-[#111111] p-4 text-left",
+      "cells": "p-4 border-b border-[#E4E4E7]"
+    },
+    "custom_shadcn": [
+      "Customize Shadcn Calendar for Attendance with pastel selected states.",
+      "Use Shadcn Select for Role/Subject assignment, replacing standard Vercel look with neo-brutalist solid borders.",
+      "Remove standard Shadcn rounded-md and substitute with hard rounded-none or rounded-sm to fit the brutalist edge."
+    ]
+  },
+  "assets_media": {
+    "image_urls": {
+      "auth_hero_background": {
+        "url": "https://images.unsplash.com/photo-1774994843799-fad43c021e4f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHwyfHxhYnN0cmFjdCUyMHBhc3RlbCUyMGdlb21ldHJpYyUyMGJhY2tncm91bmR8ZW58MHx8fHwxNzc3NjM3NDQ4fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract pastel geometric backdrop for the right side of the Login/Signup page",
+        "category": "background"
+      },
+      "dashboard_empty_state": {
+        "url": "https://images.unsplash.com/photo-1710995290333-df3dcc826496?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxlbXB0eSUyMHN0YXRlJTIwaWxsdXN0cmF0aW9uJTIwM2QlMjBzb2Z0JTIwcGFzdGVsfGVufDB8fHx8MTc3NzYzNzUxNHww&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract 3D architectural balls and arches for empty data states (no students/no subjects)",
+        "category": "illustration"
+      }
+    },
+    "icons": "lucide-react",
+    "rules": "Never use placeholder URLs. Use provided Unsplash links."
+  },
+  "motion_interactions": {
+    "hover": "Explicitly set background and text colors on hover. Use subtle negative Y translations for cards.",
+    "focus": "Use focus:ring-2 focus:ring-[#818CF8] focus:outline-none for all inputs and buttons.",
+    "lists": "Use staggered fade-in animations for student/teacher lists."
+  },
+  "testing": {
+    "attributes": "All interactive and key informational elements MUST include a data-testid attribute.",
+    "convention": "kebab-case, role-based. Example: data-testid='login-submit-button', data-testid='mark-present-btn', data-testid='student-row-1'."
+  },
+  "instructions_to_main_agent": {
+    "1": "Scaffold the React fullstack app (React + Vite + Tailwind + JS). Do NOT use TSX.",
+    "2": "Create a robust layout wrapper ensuring role-based navigation is present and functional.",
+    "3": "Implement three distinct Dashboards (Admin, Teacher, Student) as requested.",
+    "4": "Integrate Shadcn primitives (Dialog, Table, Input, Select, Calendar). Run custom Tailwind styling to match the Neo-Brutalist pastel theme (border-[#111111], sharp box shadows).",
+    "5": "Use the provided image URLs in 'assets_media' for empty states and the auth split-screen layout.",
+    "6": "Ensure all features mentioned in the problem statement are working (CRUD for users/subjects, attendance marking with dates, marks entry, and student views).",
+    "7": "Do not leave missing logic for the auth simulation. Simulate login and role assignment effectively if MongoDB isn't fully scaffolded immediately, but the prompt says 'all data will be store in mongodb', so integrate it correctly.",
+    "8": "Apply Cabinet Grotesk (headings) and Work Sans (body). Include them via Google Fonts or standard imports."
+  }
+}

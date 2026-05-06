@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bg: #FAFAF7;
+    --card: #FFFFFF;
+    --primary: #818CF8;
+    --primary-hover: #6366F1;
+    --butter: #FDE68A;
+    --mint: #E8F5E9;
+    --peach: #FECACA;
+    --sky: #BAE6FD;
+    --ink: #111111;
+    --text: #1C1C1E;
+    --muted: #52525B;
+    --soft: #E4E4E7;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Work Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.font-heading { font-family: 'DM Serif Display', serif; letter-spacing: -0.01em; }
+.font-body { font-family: 'Work Sans', sans-serif; }
+
+/* Neo brutalist utilities */
+.nb-card {
+    background: #fff;
+    border: 1px solid #111;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 0 #111;
+    transition: transform 140ms ease, box-shadow 140ms ease;
+}
+.nb-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 0 #111;
+}
+.nb-card-flat {
+    background: #fff;
+    border: 1px solid #111;
+    border-radius: 8px;
+}
+.nb-btn-primary {
+    background: #1C1C1E;
+    color: #fff;
+    border: 1px solid #111;
+    border-radius: 6px;
+    font-weight: 700;
+    padding: 10px 18px;
+    box-shadow: 3px 3px 0 0 #111;
+    transition: all 120ms ease;
+}
+.nb-btn-primary:hover {
+    background: #818CF8;
+    color: #111;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 0 #111;
+}
+.nb-btn-primary:active {
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 0 #111;
+}
+.nb-btn-secondary {
+    background: #FDE68A;
+    color: #111;
+    border: 1px solid #111;
+    border-radius: 6px;
+    font-weight: 700;
+    padding: 10px 18px;
+    box-shadow: 3px 3px 0 0 #111;
+    transition: all 120ms ease;
+}
+.nb-btn-secondary:hover {
+    background: #FCD34D;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 0 #111;
+}
+.nb-btn-danger {
+    background: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #111;
+    border-radius: 6px;
+    font-weight: 700;
+    padding: 8px 14px;
+    box-shadow: 2px 2px 0 0 #111;
+    transition: all 120ms ease;
+}
+.nb-btn-danger:hover { background: #FCA5A5; }
+.nb-input {
+    border: 1px solid #111;
+    border-radius: 6px;
+    padding: 10px 14px;
+    background: #fff;
+    width: 100%;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: box-shadow 120ms ease;
+}
+.nb-input:focus {
+    box-shadow: 3px 3px 0 0 #818CF8;
+}
+.nb-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #52525B;
+    display: block;
+    margin-bottom: 6px;
+}
+.nb-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid #111;
+    border-radius: 999px;
+    padding: 2px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #fff;
+}
+
+/* Table */
+.nb-table { width: 100%; border-collapse: collapse; border: 1px solid #111; background: #fff; }
+.nb-table th { background: #E8F5E9; text-align: left; padding: 14px; border-bottom: 1px solid #111; font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; }
+.nb-table td { padding: 14px; border-bottom: 1px solid #E4E4E7; font-size: 0.92rem; }
+.nb-table tr:last-child td { border-bottom: none; }
+.nb-table tbody tr:hover { background: #FAFAFA; }
+
+/* Glass nav */
+.nb-nav {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(18px) saturate(160%);
+    background: rgba(255,255,255,0.78);
+    border-bottom: 1px solid #111;
+}
+
+/* Tag chips for roles */
+.role-admin { background: #FDE68A; }
+.role-teacher { background: #BAE6FD; }
+.role-student { background: #E8F5E9; }
+
+/* Layered pastel backgrounds */
+.pattern-grid {
+    background-image:
+        linear-gradient(#E4E4E7 1px, transparent 1px),
+        linear-gradient(90deg, #E4E4E7 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+@layer base {
+    :root {
+        --background: 60 30% 97%;
+        --foreground: 240 10% 10%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 10%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 10%;
+        --primary: 240 10% 10%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 48 96% 76%;
+        --secondary-foreground: 240 10% 10%;
+        --muted: 240 5% 94%;
+        --muted-foreground: 240 4% 46%;
+        --accent: 142 70% 93%;
+        --accent-foreground: 240 10% 10%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 6% 90%;
+        --input: 240 6% 90%;
+        --ring: 234 89% 74%;
+        --radius: 0.5rem;
+    }
+}
+
+* { border-color: hsl(var(--border)); }
+
+div[style*="position: fixed"][style*="bottom"] {
+  display: none !important;
+}
