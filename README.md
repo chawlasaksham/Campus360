@@ -4,9 +4,9 @@ backend :-python -m uvicorn server:app --reload --port 8001
 
 frontend:-yarn start
 
-# 🚀 Class Management Backend
+# 🚀 Campus360 Backend
 
-This is a **FastAPI-based backend** for a Class Management System.
+This is a **FastAPI-based backend** for a Campus and college System.
 It provides APIs for authentication, user management, and database operations using MongoDB.
 
 ---
